@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # author = HansSarpeiDerKing
 from sensor import Sensor 
+from random import Randint
 
 class Humiture(Sensor)
 
@@ -15,7 +16,10 @@ class Humiture(Sensor)
 	def getHumiture(self):
 		return self._humiture
 
-	def test(self).
-			print 'test Ergebnisse getResult():'+self.getResult()
+	def test(self):
+			print 'test Ergebnisse getTemperature(): '+self.getTemperature(random.randint(0,50))+'°C'
+			print 'test Ergebnisse getHumiture(): '+self.getHumiturre(random.randint(0,100))+'%'
+		
+	
 
 		
