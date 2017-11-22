@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # author = Backerich
 
+import random as rn
+
 from aktor import Aktor
 
 class Buzzer(Aktor):
@@ -10,7 +12,12 @@ class Buzzer(Aktor):
 		self._minLautStaerke = minLautStaerke
 	
 	def showMinLaut(self):
-		print(self._minLautStaerke)
+		print("Mindest Lautstärke: " + str(self._minLautStaerke))
 	
 	def changeMinLaut(self, minLautStaerke):
 		self._minLautStaerke = minLautStaerke
+	
+	def test(self):
+		self.showMinLaut()
+		self.changeMinLaut(rn.randrange(1, 10))
+		self.showMinLaut()
