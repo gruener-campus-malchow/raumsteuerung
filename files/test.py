@@ -4,6 +4,7 @@
 from sound import Sound
 #from pumpe import Pumpe
 from buzzer import Buzzer
+from dc import DC
 
 soundModul= Sound('testSoundModul')
 soundModul.test()
@@ -13,3 +14,6 @@ soundModul.test()
 
 buzzerModul = Buzzer('testBuzzer')
 buzzerModul.test()
+
+dualColorModul = DC('test dual Color')
+dualColorModul.test()
