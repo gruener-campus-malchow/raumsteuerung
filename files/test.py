@@ -8,8 +8,8 @@ from buzzer import Buzzer
 soundModul= Sound('testSoundModul')
 soundModul.test()
 
-pumpModul = Pumpe('testPumpe')
-pumpModul.test()
+#pumpModul = Pumpe('testPumpe')
+#pumpModul.test()
 
 buzzerModul = Buzzer('testBuzzer')
 buzzerModul.test()
