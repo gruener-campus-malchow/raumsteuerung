@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-# Creator ZoccaX
+#Author: ZoccaX
 from aktor import Aktor
+from Random import RandInt
 
 class Pumpe(Aktor): 
 
@@ -13,4 +14,11 @@ class Pumpe(Aktor):
 
 	def setWassermenge(self, wassermenge):
 		self._wassermenge = wassermenge
+		
+	def test(self):
+
+	print ('Test-Start gesetzte Wassermenge mit setWassermenge():'+ self.setWassermenge(random.randint(0,1000)) + ' L/s')
+	print ('Test-Ergebnisse getWassermenge():'+ self.getWassermenge() + ' L/s')
+
+
 
