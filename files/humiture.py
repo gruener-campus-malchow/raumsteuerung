@@ -17,8 +17,8 @@ class Humiture(Sensor)
 		return self._humiture
 
 	def test(self):
-			print 'test Ergebnisse getTemperature(): '+self.getTemperature(random.randint(0,50))+'°C'
-			print 'test Ergebnisse getHumiture(): '+self.getHumiturre(random.randint(0,100))+'%'
+			print ('test Ergebnisse getTemperature(): '+self.getTemperature(random.randint(0,50))+'°C')
+			print ('test Ergebnisse getHumiture(): '+self.getHumiturre(random.randint(0,100))+'%')
 		
 	
 
