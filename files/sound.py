@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-
+#author = gschwarz
 from sensor import Sensor
+from random import randint
 
 class Sound(Sensor):
 
@@ -8,7 +9,14 @@ class Sound(Sensor):
 		Sensor.__init__(self, bezeichnung, status)
 	
 	def getResult(self):
-		print(self._messwert)
+		return self._messwert
 	
 	def getLastResult(self):
-		print(self._messwert[-1])
+		return self._messwert[-1]
+
+	def test(self):
+		for i in range(0,10):
+			self.randomMesswert = randint(0, 20)
+			self.addMesswert(self.randomMesswert)
+		print('Current results: '+str(self.getResult()))
+		print('Last results: '+str(self.getLastResult()))
