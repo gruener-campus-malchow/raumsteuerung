@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+#author = gschwarz
 from sensor import Sensor
 
 class Sound(Sensor):
@@ -8,7 +8,10 @@ class Sound(Sensor):
 		Sensor.__init__(self, bezeichnung, status)
 	
 	def getResult(self):
-		print(self._messwert)
+		return self._messwert
 	
 	def getLastResult(self):
-		print(self._messwert[-1])
+		return self._messwert[-1]
+
+	def test(self):
+		print('The results are: '+self.getResult())
