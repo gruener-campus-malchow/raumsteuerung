@@ -3,7 +3,7 @@
 from sensor import Sensor 
 import random
 
-class Humiture(Sensor)
+class Humiture(Sensor):
 
 	def __init__(self):
 		self._temperature = []
