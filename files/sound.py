@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 #author = gschwarz
 from sensor import Sensor
+from random import randint
 
 class Sound(Sensor):
 
@@ -12,6 +13,3 @@ class Sound(Sensor):
 	
 	def getLastResult(self):
 		return self._messwert[-1]
-
-	def test(self):
-		print('The results are: '+self.getResult())
