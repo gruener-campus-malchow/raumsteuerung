@@ -20,8 +20,3 @@ class Sound(Sensor):
 			self.addMesswert(self.randomMesswert)
 		print('Current results: '+str(self.getResult()))
 		print('Last results: '+str(self.getLastResult()))
-
-# here ends the class
-
-newWorldSound = Sound('NWS',1)
-newWorldSound.test()
