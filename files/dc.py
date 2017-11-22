@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# author = Backerich
+
+import random as rn
 
 from aktor import Aktor
 
@@ -15,3 +18,10 @@ class DC(Aktor):
 	def changeColor(self, red, green):
 		self._red = red
 		self._green = green
+	
+	def test(self):
+		print("Ich bin die Dual Color LED Test Datei.")
+		self.showColor()
+		print("Ändert Farben...")
+		self.changeColor(rn.randrange(1, 10), rn.randrange(1, 10))
+		self.showColor()

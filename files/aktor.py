@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# author = Backerich
 
 from modul import Modul
 
