@@ -18,6 +18,8 @@ class Buzzer(Aktor):
 		self._minLautStaerke = minLautStaerke
 	
 	def test(self):
+		print("Ich bin die Buzzer Test Datei.")
 		self.showMinLaut()
+		print("Misst Daten...")
 		self.changeMinLaut(rn.randrange(1, 10))
 		self.showMinLaut()
