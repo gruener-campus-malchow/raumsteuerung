@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 #Author: ZoccaX
 from aktor import Aktor
-from Random import RandInt
+import random
 
 class Pumpe(Aktor): 
 
