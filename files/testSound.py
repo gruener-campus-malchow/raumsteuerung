@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 from sound import Sound
 from random import randint
@@ -14,7 +15,7 @@ class Test(object):
 
 	def showAll(self):
 		print('Current results: '+str(self.newWorldSound.getResult()))
-		print('Last results: '+str(self.newWorldSound.getLastResult()))
+		print('Lastäöü results: '+str(self.newWorldSound.getLastResult()))
 
 newTest = Test()
 newTest.addRando(10)

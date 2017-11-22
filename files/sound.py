@@ -13,3 +13,15 @@ class Sound(Sensor):
 	
 	def getLastResult(self):
 		return self._messwert[-1]
+
+	def test(self):
+		for i in range(0,10):
+			self.randomMesswert = randint(0, 20)
+			self.addMesswert(self.randomMesswert)
+		print('Current results: '+str(self.getResult()))
+		print('Last results: '+str(self.getLastResult()))
+
+# here ends the class
+
+newWorldSound = Sound('NWS',1)
+newWorldSound.test()
