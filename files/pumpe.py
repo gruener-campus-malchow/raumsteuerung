@@ -7,18 +7,21 @@ class Pumpe(Aktor):
 
 	def __init__(self):
 		
-		self._wassermenge = 0
-
-	def getWassermenge(self):
-		return(wassermenge)
+		self.wassermenge = 0
 
 	def setWassermenge(self, wassermenge):
-		self._wassermenge = wassermenge
+		self.wassermenge = wassermenge
+
+	def getWassermenge(self):
+		return wassermenge
+
 		
 	def test(self):
 
-	print ('Test-Start gesetzte Wassermenge mit setWassermenge():'+ self.setWassermenge(random.randint(0,1000)) + ' L/s')
-	print ('Test-Ergebnisse getWassermenge():'+ self.getWassermenge() + ' L/s')
+		randStat = random.randrange(0, 1000)
+		print('Test-Start gesetzte Wassermenge mit setWassermenge():'+ str(self.setWassermenge(randStat))) + ' L/s')
+		print('Test-Ergebnisse g etWassermenge():'+ str(self.getWassermenge()) + ' L/s')
 
-
+testPumpe = Pumpe()
+testPumpe.test()
 
