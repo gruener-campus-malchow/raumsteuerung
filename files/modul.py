@@ -15,3 +15,7 @@ class Modul(object):
 	
 	def setStatus(self):
 		self._status ^= 1
+
+	def test(self)
+		print("Ich funktioniere")
+
