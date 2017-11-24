@@ -6,8 +6,8 @@ import random
 class Humiture(Sensor):
 
 	def __init__(self):
-		self._temperature = 0
-		self._humiture = 0
+		self._temperature = []
+		self._humiture = []
 
 	def setTemperature(self, temperature):
 		self._temperatur = temperature
@@ -29,3 +29,5 @@ class Humiture(Sensor):
 		print('test-start gesetzte humiture mit setHumiture(): '+str(self.setHumiturre(randStat())+'%')
 		print('test Ergebnisse getHumiture(): '+str(self.getHumiturre()+'%')
 
+testHumiture = Humiture()
+testHumiture.test()		      
