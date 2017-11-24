@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 from sound import Sound
-#from pumpe import Pumpe
 from buzzer import Buzzer
 from dc import DC
 from pumpe import Pumpe
