@@ -11,16 +11,19 @@ class Pumpe(Aktor):
 
 	def setWassermenge(self, wassermenge):
 		self.wassermenge = wassermenge
+	
 
 	def getWassermenge(self):
-		return wassermenge
+		return self.wassermenge
 
 		
 	def test(self):
 
 		randStat = random.randrange(0, 1000)
-		print('Test-Start gesetzte Wassermenge mit setWassermenge():'+ str(self.setWassermenge(randStat))) + ' L/s')
-		print('Test-Ergebnisse g etWassermenge():'+ str(self.getWassermenge()) + ' L/s')
+ 		
+		print('Test-Start gesetzte Wassermenge mit setWassermenge():'+ str(randStat) + ' L/s')
+		self.setWassermenge(randStat)
+		print('Test-Ergebnisse getWassermenge():'+ str(self.getWassermenge()) + ' L/s')
 
 testPumpe = Pumpe()
 testPumpe.test()
