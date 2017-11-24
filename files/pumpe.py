@@ -7,14 +7,14 @@ class Pumpe(Aktor):
 
 	def __init__(self):
 		
-		self.wassermenge = 0
+		self._wassermenge = 0
 
 	def setWassermenge(self, wassermenge):
-		self.wassermenge = wassermenge
+		self._wassermenge = wassermenge
 	
 
 	def getWassermenge(self):
-		return self.wassermenge
+		return self._wassermenge
 
 		
 	def test(self):
