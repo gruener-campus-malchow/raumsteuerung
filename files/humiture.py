@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 # author = HansSarpeiDerKing
-from sensor import Sensor 
+from sensor import Sensor
 import random
 
 class Humiture(Sensor):
@@ -11,18 +12,18 @@ class Humiture(Sensor):
 
 	def setTemperature(self, temperature):
 		self._temperatur = temperature
-		
+
 	def getTemperature(self):
 		return temperature
-	
+
 	def setHumiture(self, humiture):
 		self._humiture = humiture
-		
+
 	def getHumiture(self):
 		return humiture
 
 	def test(self):
-		
+
 		ranStat = random.randrange(0, 1000)
 		print('test-start gesetzte temperature mit setTemperature(): '+str(self.setTemperature(randStat())+'°C')
 		print('test Ergebnisse getTemperature(): '+str(self.getTemperature()+'°C')
@@ -30,4 +31,4 @@ class Humiture(Sensor):
 		print('test Ergebnisse getHumiture(): '+str(self.getHumiturre()+'%')
 
 testHumiture = Humiture()
-testHumiture.test()		      
+testHumiture.test()
