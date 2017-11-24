@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 #author: ZoccaX
 from sensor import Sensor
-from random import Randint
+import random
 
 class Barometer(Sensor): 
 
@@ -11,11 +11,22 @@ class Barometer(Sensor):
 		self._pressureValue = []
 
 	def getTemperature(self):
-		return(self._temperature)
+		return self._temperature
 
 	def getPressureValue(self):
-		return(self._pressureValue)
+		return self._pressureValue
 	
 	def test(self):
-		print ('Test-Ergebnisse getTemperature():'+ self.getTemperature(random.randint(0,50)) + ' °C')
-		print ('Test-Ergebnisse getPressureValue():'+ self.getPressureValue(random.randint(0,2000)) + ' hPa')
+
+		randStat = random.randrange(0, 50)
+		randStat1 = random.randrange(0, 1000)
+ 		
+		self._temperature = [randStat]
+		self._pressureValue = [randStat1]
+
+		print('Test-Start momnentanige Temperatur mit getTemperature'+ str(self._temperature) + ' L/s')
+		print('Test-Start momnentanigeR Luftdruck mit getLuftdruck'+ str(self._pressureValue) + ' L/s')
+
+testBarometer = Barometer()
+testBarometer.test()
+
