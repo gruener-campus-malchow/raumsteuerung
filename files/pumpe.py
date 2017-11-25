@@ -20,7 +20,8 @@ class Pumpe(Aktor):
 		start = time.time()
 		print('The testfunction of Pumpe starts:')
 
-		for i in range(1, 100):
+		values = 100 # Anzahl der Testwerte (n>1)
+		for i in range(1, values):
 			randStat = random.randrange(100, 1000)
 			self.setWassermenge(randStat)
 			print('setWassermenge(): '+ str(randStat) + ' L/h, ' ,
@@ -28,7 +29,7 @@ class Pumpe(Aktor):
 
 		end = time.time()
 		dauer = end -start
-		print('The test-function of Pumpe end and took ' + str(dauer) + 'seconds.')
+		print('The test-function of Pumpe ends and took ' + str(dauer) + 'seconds.')
 
 testPumpe = Pumpe()
 testPumpe.test()
