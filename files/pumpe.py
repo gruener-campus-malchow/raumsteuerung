@@ -20,9 +20,14 @@ class Pumpe(Aktor):
 		for i in range(1, 100):
 
 			randStat = random.randrange(0, 1000)
-			print('Test-Start gesetzte Wassermenge mit setWassermenge():'+ str(randStat) + ' L/s')
+#			print('Test-Start gesetzte Wassermenge mit setWassermenge():'+ str(randStat) + ' L/s')
+#			self.setWassermenge(randStat)
+#			print('Test-Ergebnisse getWassermenge():'+ str(self.getWassermenge()) + ' L/s')
+
+			print('testPumpe start:')
 			self.setWassermenge(randStat)
-			print('Test-Ergebnisse getWassermenge():'+ str(self.getWassermenge()) + ' L/s')
+			print('Gesetzte Wassermenge durch setWassermenge(): '+ str(randStat) + ' L/s' ,
+					'Ergebnis aus getWassermenge()' + str(self.getWassermenge()) + ' L/s')
 
 testPumpe = Pumpe()
 testPumpe.test()
