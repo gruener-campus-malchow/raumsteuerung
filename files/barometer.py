@@ -19,14 +19,13 @@ class Barometer(Sensor):
 
 	def test(self):
 
-		randStat = random.randrange(0, 50)
-		randStat1 = random.randrange(0, 1000)
-
-		self._temperature = [randStat]
-		self._pressureValue = [randStat1]
+		for _ in range(1, 100):
+			self._temperature.append(random.randrange(0, 50))
+			self._pressureValue.append(random.randrange(0, 1000))
 
 		print('Test-Start momnentanige Temperatur mit getTemperature'+ str(self._temperature) + ' L/s')
 		print('Test-Start momnentanigeR Luftdruck mit getLuftdruck'+ str(self._pressureValue) + ' L/s')
+
 
 testBarometer = Barometer()
 testBarometer.test()
