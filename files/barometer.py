@@ -28,8 +28,8 @@ class Barometer(Sensor):
 			self._temperature.append(random.randrange(0, 50))
 			self._pressureValue.append(random.randrange(0, 1000))
 
-		print('Temperatur mit getTemperature'+ str(self._temperature) + ' L/s')
-		print('Luftdruck mit getLuftdruck'+ str(self._pressureValue) + ' L/s')
+		print('Temperatur mit getTemperature'+ str(self._temperature) + ' C°')
+		print('Luftdruck mit getLuftdruck'+ str(self._pressureValue) + ' hPa')
 
 		end = time.time()
 		dauer = end -start
