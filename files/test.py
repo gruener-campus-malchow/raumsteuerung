@@ -2,16 +2,13 @@
 # -*- coding: utf-8 -*-
 
 from sound import Sound
-#from pumpe import Pumpe
 from buzzer import Buzzer
 from dc import DC
 from pumpe import Pumpe
+from barometer import Barometer
 
 soundModul= Sound('testSoundModul')
 soundModul.test()
-
-#pumpModul = Pumpe('testPumpe')
-#pumpModul.test()
 
 buzzerModul = Buzzer('testBuzzer')
 buzzerModul.test()
@@ -21,3 +18,6 @@ buzzerModul.test()
 
 pumpe = Pumpe()
 pumpe.test()
+
+barometer = Barometer()
+barometer.test()

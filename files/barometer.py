@@ -3,6 +3,7 @@
 #author: ZoccaX
 from sensor import Sensor
 import random
+import time
 
 class Barometer(Sensor):
 
@@ -19,14 +20,20 @@ class Barometer(Sensor):
 
 	def test(self):
 
-		randStat = random.randrange(0, 50)
-		randStat1 = random.randrange(0, 1000)
+		start = time.time()
+		print('The testfunction of Barometer starts:')
 
-		self._temperature = [randStat]
-		self._pressureValue = [randStat1]
+		values = 100 # Anzahl der Testwerte (n>1)
+		for _ in range(1, values):
+			self._temperature.append(random.randrange(0, 50))
+			self._pressureValue.append(random.randrange(0, 1000))
 
-		print('Test-Start momnentanige Temperatur mit getTemperature'+ str(self._temperature) + ' L/s')
-		print('Test-Start momnentanigeR Luftdruck mit getLuftdruck'+ str(self._pressureValue) + ' L/s')
+		print('Temperatur mit getTemperature'+ str(self._temperature) + ' C°')
+		print('Luftdruck mit getLuftdruck'+ str(self._pressureValue) + ' hPa')
+
+		end = time.time()
+		dauer = end -start
+		print('The test-function of Barometer ends and took ' + str(dauer) + 'seconds.')
 
 testBarometer = Barometer()
 testBarometer.test()

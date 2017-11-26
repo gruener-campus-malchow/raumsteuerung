@@ -3,6 +3,7 @@
 #Author: ZoccaX
 from aktor import Aktor
 import random
+import time
 
 class Pumpe(Aktor):
 
@@ -16,12 +17,19 @@ class Pumpe(Aktor):
 		return self._wassermenge
 
 	def test(self):
+		start = time.time()
+		print('The testfunction of Pumpe starts:')
 
-		randStat = random.randrange(0, 1000)
+		values = 100 # Anzahl der Testwerte (n>1)
+		for i in range(1, values):
+			randStat = random.randrange(100, 1000)
+			self.setWassermenge(randStat)
+			print('setWassermenge(): '+ str(randStat) + ' L/h, ' ,
+					'getWassermenge()' + str(self.getWassermenge()) + ' L/h')
 
-		print('Test-Start gesetzte Wassermenge mit setWassermenge():'+ str(randStat) + ' L/s')
-		self.setWassermenge(randStat)
-		print('Test-Ergebnisse getWassermenge():'+ str(self.getWassermenge()) + ' L/s')
+		end = time.time()
+		dauer = end -start
+		print('The test-function of Pumpe ends and took ' + str(dauer) + 'seconds.')
 
 testPumpe = Pumpe()
 testPumpe.test()
