@@ -3,32 +3,37 @@
 # author = HansSarpeiDerKing
 from sensor import Sensor
 import random
+import time
 
 class Humiture(Sensor):
 
-	def __init__(self):
-		self._temperature = []
-		self._humiture = []
+        def __init__(self):
 
-	def setTemperature(self, temperature):
-		self._temperatur = temperature
+                self._temperature = []
+                self._humiture = []
 
-	def getTemperature(self):
-		return temperature
+        def getTemperature(self):
+                return self._temperature
 
-	def setHumiture(self, humiture):
-		self._humiture = humiture
+        def getHumiture(self):
+                return self._humiture
 
-	def getHumiture(self):
-		return humiture
+        def test(self):
 
-	def test(self):
+                start = time.time()
+                print('The testfunction of Humiture starts:')
 
-		ranStat = random.randrange(0, 1000)
-		print('test-start gesetzte temperature mit setTemperature(): '+str(self.setTemperature(randStat())+'°C')
-		print('test Ergebnisse getTemperature(): '+str(self.getTemperature()+'°C')
-		print('test-start gesetzte humiture mit setHumiture(): '+str(self.setHumiturre(randStat())+'%')
-		print('test Ergebnisse getHumiture(): '+str(self.getHumiturre()+'%')
+                values = 100 # Anzahl der Testwerte (n>1)
+                for _ in range(1, values):
+                        self._temperature.append(random.randrange(0, 50))
+                        self._humiture.append(random.randrange(0, 100))
+
+                print('Temperatur mit getTemperature'+ str(self._temperature) + ' C°')
+                print('Luftfeuchtigkeit mit getLuftfeuchtigkeit'+ str(self._humiture) + ' %')
+
+                end = time.time()
+                dauer = end -start
+                print('The test-function of Humiture ends and took ' + str(dauer) + 'seconds.')
 
 testHumiture = Humiture()
 testHumiture.test()
