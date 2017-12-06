@@ -23,9 +23,9 @@ class Humiture(Sensor):
                 start = time.time()
                 print('The testfunction of Humiture starts:')
 
-                values = 100 # Anzahl der Testwerte (n>1)
+                values = 2 # Anzahl der Testwerte (n>1)
                 for _ in range(1, values):
-                        self._temperature.append(random.randrange(0, 50))
+                        self._temperature.append(random.randrange(-50, 50))
                         self._humiture.append(random.randrange(0, 100))
 
                 print('Temperatur mit getTemperature'+ str(self._temperature) + ' C°')
